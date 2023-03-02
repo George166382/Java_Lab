@@ -36,23 +36,31 @@ public class Hello {
             p = p * 16;
         }
         n = n + nr1;
+        n = n * 6;
         //After we add FF
         System.out.println(n);
-        int contor = 0;
-        Integer sum = 0;
-        while (n != 0)
+       // int contor = 0;
+        int sum = 0;
+        int n1 = n;
+        while (n1 != 0)
+            {
+                sum = sum + n1 % 10;
+                n1 = n1 / 10;
+
+            }
+        n = sum;
+        while(n>9)
         {
-            sum = sum + n % 10;
-            n = n / 10;
-            contor ++;
+            sum = 0;
+            while (n != 0)
+            {
+                sum = sum + n % 10;
+                n = n / 10;
+
+            }
+            n = sum;
         }
-        // Suma cifrelor
-        System.out.println(sum);
-        
-        
-        // result
-        System.out.println(sum);
-        int result = 0;
+        int result = n;
         // last requirement
         System.out.println("Willy-nilly, this semester I will learn " + languages[result]);
     }
