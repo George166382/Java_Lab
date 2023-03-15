@@ -30,7 +30,7 @@ public class Person implements Node,Comparable<Person>{
     
     @Override
     public int compareTo(Person o) {
-        return this.name.compareTo(o.name);
+        return this.name.compareTo(o.getName());
     }
 
     

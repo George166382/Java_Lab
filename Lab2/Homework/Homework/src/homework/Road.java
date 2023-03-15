@@ -91,39 +91,3 @@ public class Road {
     
 }
 
-class Highway extends Road
-{
-    public Highway()
-    {
-        super();
-    }
-    public Highway(Location a, Location b)
-    {
-        super(a,b);
-    }
-    
-}
-class Express extends Road
-{
-    public Express()
-    {
-        super();
-    }
-    public Express(Location a, Location b)
-    {
-        super(a,b);
-    }
-    
-}
-class Country extends Road
-{
-    public Country()
-    {
-        super();
-    }
-    public Country(Location a, Location b)
-    {
-        super(a,b);
-    }
-    
-}

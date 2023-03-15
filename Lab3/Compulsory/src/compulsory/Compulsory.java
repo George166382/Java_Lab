@@ -14,13 +14,15 @@ public class Compulsory {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Person p = new Person();
-        p.setName("Cristi");
+        Person p1 = new Person();
+        p1.setName("Cristi");
         Company c = new Company();
         c.setName("Endava");
-        p.setName("Cristi");
+        Person p2 = new Person();
+        p2.setName("Alin");
+        System.out.println(p1.compareTo(p2));
         Network n = new Network();
-        n.addNode(p);
+        n.addNode(p1);
         n.addNode(c);
         n.print();
     }
