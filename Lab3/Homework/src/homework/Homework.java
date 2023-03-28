@@ -25,13 +25,13 @@ public class Homework {
         cal.set(Calendar.DAY_OF_MONTH,25);
 
         Date d = cal.getTime();
-        Programmer p = new Programmer(6,"Gigi Becali",d);
+        Person p = new Programmer(6,"Gigi Becali",d);
         n.addNode(p);
         Company c = new Company("FCSB","Bucuresti");
         n.addNode(c);
         cal.set(1965, 4, 12);
         d = cal.getTime();
-        Designer des = new Designer("mm",d,false);
+        Person des = new Designer("mm",d,false);
         n.addNode(des);
         des.addRelationship(p, des.getName());
         des.addRelationship(c, des.getName());

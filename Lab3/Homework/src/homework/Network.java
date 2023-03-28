@@ -29,7 +29,7 @@ public class Network {
     
     public void print()
     {
-       //this.nodes.sort(Comparator.comparing((Node n)->n.nrOfApp(n)));
+        this.nodes.sort(Comparator.comparing((Node n)->n.nrOfApp()));
         for(int i=0;i<this.nodes.size();i++)
         {
             System.out.println(this.nodes.get(i).getName() + " " + this.nodes.get(i).nrOfApp());
