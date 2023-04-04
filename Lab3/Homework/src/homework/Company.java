@@ -50,7 +50,8 @@ public class Company implements Node,Comparable<Company>{
     
     public void addRelationship(Node node, String value)
     {
-        relationships.put(node, value);
+        this.relationships.put(node, value);
+       
     }
 
     /**

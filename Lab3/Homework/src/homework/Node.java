@@ -9,6 +9,7 @@ package homework;
  * @author G
  */
 public interface Node {
+
     
     String getName();
 
@@ -18,5 +19,8 @@ public interface Node {
      * @return
      */
     public int nrOfApp();
+
+    
+    
     
 }
