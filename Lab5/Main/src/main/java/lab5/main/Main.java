@@ -20,8 +20,8 @@ public class Main {
     }
     private void testCreateSave() throws IOException  {
         Catalog catalog = new Catalog("MyDocuments");
-        var book = new Document("article1","Me","d:/eu/Orac" );
-        var article = new Document("book1", "Me2","d:/eu/Orac" );
+        var book = new Document("article1","Me","d:/eu/Orac/article1.txt" );
+        var article = new Document("book1", "Me2","d:/eu/Orac/book1.txt" );
         catalog.add(book);
         catalog.add(article);
         CatalogUtil.save(catalog, "d:/eu/Orac/catalog.json");

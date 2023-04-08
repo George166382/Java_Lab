@@ -30,7 +30,7 @@ public class CatalogUtil {
             }
     }
     public static Catalog load(String path)
-    throws InvalidCatalogException/*,*/ /*FileNotFoundException, IOException, ClassNotFoundException*/ {
+    throws InvalidCatalogException {
         Catalog cat;
         try {
             FileInputStream fis = new FileInputStream(path);
@@ -53,14 +53,10 @@ public class CatalogUtil {
             return cat;
         
         
-       // Catalog cat = (Catalog)in.readObject();
+       
         
     }
-   /* public static void view(doc doc) {
-    Desktop desktop = Desktop.getDesktop();
-    //... browse or open, depending of the location type
-    }*/
-
+ 
    public static void view(Document doc) {
     Desktop desktop = Desktop.getDesktop();
     try {

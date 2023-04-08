@@ -38,6 +38,7 @@ public class Homework {
                 .toArray(Student[]::new);
         List<Student> studentList = new ArrayList<>();
         studentList.addAll(Arrays.asList(s));
+        
         //studentList.stream().filter(s->prefMap)
         Map<Student,List<Project>> prefMap = new HashMap<>();
         prefMap.put (studentList.get(0), Arrays.asList(p[0],p[1],p[2],p[3]));
