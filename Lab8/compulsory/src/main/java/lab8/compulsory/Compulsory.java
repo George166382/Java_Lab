@@ -22,10 +22,10 @@ public class Compulsory {
             Database.getConnection().commit();
             var albums = new AlbumAO();
             albums.create(1 , 1979, "The Wall");
-            //findByName
+            System.out.println(artists.findByName("Michael Jackson"));
             albums.create(2 , 1982, "Thriller");
+            System.out.println(artists.findByName("Pink Floyd"));
             Database.getConnection().commit();
-            //TODO: print all the albums in the database
             Database.getConnection().close();
         } catch (SQLException e) {
             System.err.println(e);
