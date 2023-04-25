@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Catalog Report</title>
+</head>
+<body>
+	<h1>Catalog Report</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>ID</th>
+				<th>Tags</th>
+			</tr>
+		</thead>
+		<tbody>
+		#foreach($document in $docs)
+			
+				<td>$document.getTitle()</td>
+				<td>$document.getId()</td>
+				<td>
+					<ul>
+						#if($document.getTags().isEmpty())
+							<li>None</li>
+						#else
+							#foreach($tag in $document.getTags().entrySet())
+								<li>$tag.key: $tag.value</li>
+							#end
+						#end
+					</ul>
+				</td>
+			
+		#end
+		</tbody>
+	</table>
+</body>
+</html>
