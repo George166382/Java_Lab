@@ -28,8 +28,8 @@ public class Manager {
         AbstractJpaController a = new ArtistJpaController(emf);
         AbstractJpaController g = new GenreJpaController(emf);
         AbstractJpaController al = new AlbumJpaController(emf);
-         Artist artist = new Artist(3);
-        artist.setName("Beatles");
+         Artist artist = new Artist(3,"Beatles");
+        //artist.setName("Beatles");
         Genre gen = new Genre(3);
         gen.setName("Rock");
         Album alb = new Album(3);

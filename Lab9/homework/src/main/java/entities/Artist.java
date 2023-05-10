@@ -8,7 +8,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -29,8 +32,11 @@ public class Artist implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "id")
     @Basic(optional = false)
+    @Column(name = "id")
     private Integer id;
+    @Column(name = "name")
     private String name;
     @OneToMany(mappedBy="artist")
     private List<Album> albums;
@@ -39,6 +45,12 @@ public class Artist implements Serializable {
         this.name = new String();
     }
 
+    public Artist(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+        this.albums = new ArrayList<>();
+    }
+    
     public Artist(Integer id) {
         this.id = id;
         this.name = new String();
